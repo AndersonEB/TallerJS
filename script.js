@@ -12,9 +12,9 @@ while (opcion !== 0) {
 
   if (opcion === 1){
     contOpcion1++
-    let num1 = Number(prompt('Ingresar numero: '));
-let num2 = Number(prompt('Ingresar numero: '));
-let num3 = Number(prompt('Ingresar numero: '));
+    let num1 = Number(prompt('Ingresar número: '));
+let num2 = Number(prompt('Ingresar número: '));
+let num3 = Number(prompt('Ingresar número: '));
 
  if (num1 > num2 ) {
     if(num2 > num3) {
@@ -54,6 +54,29 @@ if (num1 < num2 ) {
           } else {
                 console.log("Triángulo Escaleno.");
             }
+}else if (opcion === 4){
+    contOpcion4++
+    let num1= parseInt(prompt('Ingrese un número: '));
+    let num2 = parseInt(prompt('Ingrese un número: '));
+            function numAm(numero) {
+                let suma = 0;
+                for (let i = 1; i <= numero / 2; i++) {
+                  if (numero % i === 0) {
+                    suma += i;
+                  }
+                }
+                return suma;
+              }
+            
+              const n1d = numAm(num1);
+              const n2d = numAm(num2);
+            
+              if (n1d === num2 && div2 === num1) {
+                console.log(num1 + " y " + num2 + " son  amigos.");
+              } else {
+                console.log(num1 + " y " + num2 + " no son  amigos.");
+              }
+            
 }
 
 
