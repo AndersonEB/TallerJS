@@ -42,6 +42,18 @@ if (num1 < num2 ) {
     
     console.log('El area del circulo es: '+ pi*radio*radio);
 
+}else if (opcion === 3){
+    contOpcion3++
+    let lado1 = parseFloat(prompt("Ingrese el primer lado del triángulo:"));
+    let lado2 = parseFloat(prompt("Ingrese el segundo lado del triángulo:"));
+    let lado3 = parseFloat(prompt("Ingrese el tercer lado del triángulo:"));
+        if (lado1 === lado2 && lado2 === lado3) {
+                console.log(" Triángulo Equilátero.");
+          } else if (lado1 === lado2 || lado1 === lado3 || lado2 === lado3) {
+                console.log("Triángulo Isósceles.");
+          } else {
+                console.log("Triángulo Escaleno.");
+            }
 }
 
 
