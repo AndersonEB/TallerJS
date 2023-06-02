@@ -77,8 +77,31 @@ if (num1 < num2 ) {
                 console.log(num1 + " y " + num2 + " no son  amigos.");
               }
             
+}else if (opcion === 5){
+    contOpcion5++
+    let valCompra = parseInt(prompt('Ingrese el valor de la compra: $'));
+    let cant = parseInt(prompt('Ingrese la cantidad del producto: '));
+
+    let subtotal = valCompra * cant;
+    let iva = subTotal * 0.19;
+    let total = subTotal + iva;
+
+    if (subtotal > 500000) {
+      total = subTotal;
+      iva = 0;
+      console.log(`El valor del IVA es: $${iva}`);
+      console.log(`El valor de la compra es: $${subtoTal}`);
+      if (subtotal > 1000000) {
+        let descuento = subTotal * 0.1;
+        total -= descuento;
+        console.log(`Descuento del 10% aplicado. Total: $${total}`);
+      }
+    } else {
+      console.log(`Valor del IVA: $${iva}`);
+      console.log(`Total: $${total}`);
 }
 
 
 
+}
 }
