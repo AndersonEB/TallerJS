@@ -100,8 +100,56 @@ if (num1 < num2 ) {
       console.log(`Valor del IVA: $${iva}`);
       console.log(`Total: $${total}`);
 }
-
-
-
+}else if (opcion === 6){
+    contOpcion6++
+    function ingresarNota(mesaje) {
+        let nota;
+        do {
+          nota = parseFloat(prompt(mesaje));
+          if (nota > 5) {
+            console.log("El rango de notas es desde 0 hasta 5. Por favor, ingrese nuevamente la nota.");
+          }
+        } while (nota > 5);
+        return nota;
+      }
+      
+      let nota1 = ingresarNota("Ingrese la primera nota (0-5):");
+      let nota2 = ingresarNota("Ingrese la segunda nota (0-5):");
+      let nota3 = ingresarNota("Ingrese la tercera nota (0-5):");
+      let nota4 = ingresarNota("Ingrese la cuarta nota (0-5):");
+      
+      if (nota4 === 5) {
+        nota4++;
+        nota1++;
+        nota2++;
+        nota3++;
+      }
+      
+      let notaFinal = nota1 * 0.1 + nota2 * 0.2 + nota3 * 0.3 + nota4 * 0.4;
+      
+      if (notaFinal > 3.5) {
+        console.log("El estudiante gana.");
+      } else {
+        console.log("El estudiante pierde.");
+      }           
 }
 }
+console.log(`El primer ejercicicio se ejecutó ${contOpcion1} veces`);
+console.log(`El segundo ejercicio  se ejecutó ${contOpcion2} veces`);
+console.log(`El tercer ejercicio  se ejecutó ${contOpcion3} veces`);
+console.log(`El cuarto ejercicio  se ejecutó ${contOpcion4} veces`);
+console.log(`El quinto ejercicio  se ejecutó ${contOpcion5} veces`);
+console.log(`El sexto ejercicio  se ejecutó ${contOpcion6} veces`);
+
+
+
+const contadores = [contOpcion1, contOpcion2, contOpcion3, contOpcion4, contOpcion5, contOpcion6];
+
+const masVeces = contadores.indexOf(Math.max(...contadores));
+const ejercicioMas = `Ejercicio ${masVeces + 1}`;
+
+const menosVeces = contadores.indexOf(Math.min(...contadores));
+const ejercicioMenos = `Ejercicio ${menosVeces + 1}`;
+
+console.log(`El ejercicio más ejecutado es: ${ejercicioMas}`);
+console.log(`El ejercicio menos ejecutado es: ${ejercicioMenos}`);
